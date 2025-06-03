@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Street Rags</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7; /* Blanco roto muy suave */
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #8b0000; /* Borgoña oscuro / Rojo vino intenso */
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+      nav {
+        background-color: #a00000; /* Un tono un poco más claro de borgoña */
+        text-align: center;
+        padding: 10px;
+      }
+      nav a {
+        background-color: #ffffff; /* Blanco puro para los botones */
+        color: #8b0000; /* Texto del mismo color que el header */
+        border: none;
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave para los botones */
+      }
+      nav a:hover {
+        background-color: #f0f0f0; /* Un blanco roto al pasar el ratón */
+      }
+      section {
+        padding: 20px;
+        display: none;
+        background-color: #ffffff; /* Fondo blanco para las secciones */
+        margin: 20px auto;
+        max-width: 900px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Sombra más pronunciada */
+        border-radius: 8px;
+        border: 1px solid #e0e0e0; /* Borde sutil para las secciones */
+      }
+      section:target {
+        display: block;
+      }
+      #inicio:target,
+      body:not(:has(:target)) #inicio {
+          display: block;
+      }
+      .section-title {
+        color: #8b0000; /* Título del mismo color que el header */
+        margin-bottom: 10px;
+      }
+      p { /* Ajuste de color de texto general para mejor contraste */
+          color: #333333;
+      }
+      /* Mantener listas para las secciones que sí las necesitan */
+      #ofertas ul,
+      #ver-lecturas ul {
+          list-style: disc; /* Mantener las viñetas por defecto */
+          color: #333333;
+          margin-left: 20px; /* Indentar un poco las listas */
+      }
+      #ofertas li,
+      #ver-lecturas li {
+          margin-bottom: 5px;
+      }
+
+      .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+        justify-content: center;
+      }
+      .image-container img {
+        width: 200px;
+        height: auto;
+        border: 1px solid #cccccc; /* Borde más suave para imágenes */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 4px;
+      }
+      .pdf-buttons {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .pdf-buttons a {
+        background-color: #ffffff; /* Mismo color que los botones de navegación */
+        color: #8b0000; /* Mismo color de texto que los botones de navegación */
+        border: none;
+        padding: 10px 15px;
+        margin: 5px;
+        border-radius: 0px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave para los botones */
+      }
+      .pdf-buttons a:hover {
+        background-color: #f0f0f0; /* Mismo hover que los botones de navegación */
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>Street Rags</h1>
+    </header>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#hombres">Hombres</a>
+      <a href="#mujeres">Mujeres</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#ver-lecturas">Ver Lecturas</a>
+    </nav>
+
+    <section id="inicio">
+      <h2 class="section-title">Bienvenido a Street Rags</h2>
+      <p>Explora las últimas tendencias urbanas para hombres y mujeres.</p>
+      <div class="image-container">
+        <img src="inicio1.jpeg" alt="Imagen de inicio 1">
+        <img src="inicio2.jpeg" alt="Imagen de inicio 2">
+        <img src="inicio3.jpeg" alt="Imagen de inicio 3">
+      </div>
+    </section>
+
+    <section id="hombres">
+      <h2 class="section-title">Ropa para Hombres</h2>
+      <p>Descubre nuestra exclusiva colección de ropa urbana para hombres.</p>
+      <div class="image-container">
+        <img src="hombre1.jpeg" alt="Hombre 1">
+        <img src="hombre2.jpeg" alt="Hombre 2">
+        <img src="hombre3.jpeg" alt="Hombre 3">
+        <img src="hombre4.jpeg" alt="Hombre 4">
+      </div>
+    </section>
+
+    <section id="mujeres">
+      <h2 class="section-title">Ropa para Mujeres</h2>
+      <p>Explora las últimas tendencias en moda urbana femenina.</p>
+      <div class="image-container">
+        <img src="mujer1.jpeg" alt="Mujer 1">
+        <img src="mujer2.jpeg" alt="Mujer 2">
+        <img src="mujer3.jpeg" alt="Mujer 3">
+        <img src="mujer4.jpeg" alt="Mujer 4">
+      </div>
+    </section>
+
+    <section id="ofertas">
+      <h2 class="section-title">Ofertas Especiales</h2>
+      <ul>
+        <li>2x1 en camisetas urbanas</li>
+        <li>30% de descuento en chaquetas street</li>
+        <li>Envío gratis en compras mayores a $100</li>
+        <li>Accesorios seleccionados a mitad de precio</li>
+      </ul>
+      <div class="image-container">
+        <img src="ofertas1.jpeg" alt="Oferta 1">
+        <img src="ofertas2.jpeg" alt="Oferta 2">
+        <img src="ofertas3.jpeg" alt="Oferta 3">
+        <img src="ofertas4.jpeg" alt="Oferta 4">
+      </div>
+    </section>
+
+    <section id="ver-lecturas">
+      <h2 class="section-title">Proyectos de Lectura en PDF</h2>
+      <p>Aquí puedes descargar información detallada sobre nuestros proyectos.</p>
+      <div class="pdf-buttons">
+        <a href="proyecto1.pdf" target="_blank">Proyecto 1</a>
+        <a href="proyecto2.pdf" target="_blank">Proyecto 2</a>
+        <a href="proyecto3.pdf" target="_blank">Proyecto 3</a>
+        <a href="proyecto4.pdf" target="_blank">Proyecto 4</a>
+        <a href="proyecto5.pdf" target="_blank">Proyecto 5</a>
+        <a href="proyecto6.pdf" target="_blank">Proyecto 6</a>
+        <a href="proyecto7.pdf" target="_blank">Proyecto 7</a>
+      </div>
+      
+    
+    </section>
+
+  </body>
+</html>
